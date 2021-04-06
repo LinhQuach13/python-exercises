@@ -71,7 +71,7 @@ type({'a': []})
 # and predict what the result of evaluating it would be, then execute the expression in your Python REPL.
 
 '1' + 2
-#Answer: I would guees it would produce an error becasue it is comparing a string and an integer. You cannot
+#Answer: I would guess it would produce an error becasue it is trying to operate on a string and an integer. You cannot
 # perform operations on two data types.
 
 6 % 4
