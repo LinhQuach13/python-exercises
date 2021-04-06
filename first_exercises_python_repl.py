@@ -58,6 +58,7 @@ type({'a': []})
 
 # A Matrix?
     #Answer: list 
+
 # The email addresses collected from a registration form?
     #Answer: string
 
@@ -74,7 +75,7 @@ type({'a': []})
 # perform operations on two data types.
 
 6 % 4
-
+    
 type(6 % 4)
 
 type(type(6 % 4))
