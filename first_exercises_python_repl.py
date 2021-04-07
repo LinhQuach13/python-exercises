@@ -74,99 +74,104 @@ type({'a': []})
 # and predict what the result of evaluating it would be, then execute the expression in your Python REPL.
 
 '1' + 2
-#Answer: I would guess it would produce an error 
-# becasue it is trying to operate on a string and an integer. You cannot
-# perform operations on two data types. The answer was 
+#Answer: I would predict it would produce an error 
+# because it is trying to operate on a string and an integer. You cannot
+# perform operations on two data types. My answer was correct and returned a
 # TypeError: can only concatenate str (not "int") to str.
 
 6 % 4
-# I would guess that it would return 1.5 because this operator includes the remainder when 
+# I would predict that it would return 1.5 because this operator includes the remainder when 
 # the numbers are divided. The answer was 2 because the answer was returned as an integer data type
 # and not a float data type thus the answer was rounded.
     
 type(6 % 4)
-# Answer: I would guess the integer data type would be returned and this answer is correct.
+# Answer: I would predict the integer data type would be returned and this answer is correct.
 
 type(type(6 % 4))
-# Answer: I would guess this might return and error. The answer was it returned the data type as type and
+# Answer: I would predict this might return and error. The answer was it returned the data type as type and
 # researching into this it seems that because type is passed as the argument in the type function it returns 
 # type as the data type.
 
 '3 + 4 is ' + 3 + 4
-#Answer: I would guess an error would occur because it is trying to combine two different data types.
+#Answer: I would predict an error would occur because it is trying to combine two different data types.
 # and this answer was correct an TypeError: can only concatenate str (not "int") to str was returned.
 
 0 < 0
-# Answer: I would guess this would return false because 0 is not larger than 0 and this is correct. 
+# Answer: I would predict this would return false because 0 is not larger than 0 and this is correct. 
 
 'False' == False
-# Answer: I would guess this would return false because it is comparing a string and a boolean data
-# type which are not equal to eachother. This guess was correct.
+# Answer: I would predict this would return false because it is comparing a string and a boolean data
+# type which are not equal to eachother. This prediction was correct.
 
 True == 'True'
-# Answer: I would guess this would return false because it is comparing a string and a boolean data
-# type which are not equal to eachother. This guess was correct.
+# Answer: I would predict this would return false because it is comparing a string and a boolean data
+# type which are not equal to eachother. This prediction was correct.
 
 5 >= -5
 # Answer: This would return true because positive 5 is larger than or equal to negative five.
-# My guess was correct.
+# My prediction was correct.
 
 True or "42"
-#Answer: I would guess this would return True because as long as either condition is met 
-# it will return True. My guess was correct.
+#Answer: I would predict this would return True because as long as either condition is met 
+# it will return True. My prediction was correct.
 
 6 % 5
-#Answer: I would guess it will return 1 because this is division with a remainder. In this case
+#Answer: I would predict it will return 1 because this is division with a remainder. In this case
 # it would equal 1.2 and due to it being the integer data type it will round to 1.
 
 5 < 4 and 1 == 1
-# Answer:  I would guess false would be returned because 5 is not less than 4 as the the operator 
+# Answer:  I would predict false would be returned because 5 is not less than 4 as the the operator 
 # is wanting the opposite. The operator 1 == 1 is correct but due to the first condition not being met
-# then it will return false. My guess was correct.
+# then it will return false. My prediction was correct.
 
 'codeup' == 'codeup' and 'codeup' == 'Codeup'
-# Answer:  I guess this would return false because although the first operation is correct the second one
-# is not and both must be correct to return true. My guess was correct.
+# Answer:  I predict this would return false because although the first operation is correct the second one
+# is not and both must be correct to return true. My prediction was correct.
 
 4 >= 0 and 1 !== '1'
-# Answer: I would guess this would return an error because in the second operation is comparing
-# two different data types and this is not valid syntax. My guess was correct.
+# Answer: I would predict this would return an error because in the second operation is comparing
+# two different data types and this is not valid syntax. My prediction was correct.
 
 6 % 3 == 0
-# Answer: I would guess this is true because 6/3 will not have a remainder thus == 0.
-#My guess was correct.
+# Answer: I would predict this is true because 6/3 will not have a remainder thus == 0.
+#My prediction was correct.
 
 5 % 2 != 0
-# Answer: I would guess this is true because 5/2 will have a remainder thus will not == 0
-# as operator suggest in the statement. My guess was correct.
+# Answer: I would predict this is true because 5/2 will have a remainder thus will not == 0
+# as operator suggest in the statement. My prediction was correct.
 
 [1] + 2
-#Answer: I would guess this would produce an error because [1] is a list data type
+#Answer: I would predict this would produce an error because [1] is a list data type
 # and 2 is an integer data type. You cannot perform operations on two different data types. 
-#My guess was correct and produced this error TypeError: can only concatenate list (not "int") to list
+#My prediction was correct and produced this error TypeError: can only concatenate list (not "int") to list
 
 
 [1] + [2]
-# Answer: I would guess this would concatenate the lists data types together and
+# Answer: I would predict this would concatenate the lists data types together and
 # my answer was correct.
 
 [1] * 2
-# Answer: I would guess this would produce and error because you cannot perform an operation
-#between two different data types. In this case my guess was not correct 
+# Answer: I would predict this would produce and error because you cannot perform an operation
+#between two different data types. In this case my prediction was not correct 
 # because it return 1 twice in a list due to it being re-assigned.
 # The multiplication operator allows the variable to reference themselves due to this reassignment.
+# Further explanation: It makes two lists, it literally multiple the quantity of lists with the same values.
+# The integer 2 lets python concat the list to itself twice.
+
 
 [1] * [2]
-# Answer: I would have guess this might produce and error becauase it's referencing two list variables.
+# Answer: I would have predict this might produce and error because it's referencing two list variables.
+#Python will not run this because [2] is not an integer and lists variables cannot be multiplied
+#by eachother.
 # This resulted in an error message TypeError: can't multiply sequence by non-int of type 'list'.
 
 [] + [] == []
-# Answer: I would guess this would return true because a list plus a list will equal a list. 
-#My guess was correct.
+# Answer: I would predict this would return true because a list plus a list will equal a list. 
+#My prediction was correct.
 
 {} + {}
-# Answer: I would guess this might not work because this is not how you combine dictionaries.
-# My guess was correct in it would not work because the error resulted was
+# Answer: I would predict this might not work because this is not how you combine dictionaries.
+# My prediction was correct in it would not work because the error resulted was
 #  TypeError: unsupported operand type(s) for +: 'dict' and 'dict'
 
 
