@@ -222,3 +222,42 @@ else:
     grade = 'A'
 print(grade)
     
+
+
+    #Bonus
+
+#Edit your grade ranges to include pluses and minuses (ex: 99-100 = A+).
+#Create a list of dictionaries where each dictionary represents 
+#a book that you have read. Each dictionary in the list should have the keys title, 
+# author, and genre. Loop through the list and print out information about each book.
+#Prompt the user to enter a genre, then loop through your books list and 
+# print out the titles of all the books in that genre.
+bookshelf = [
+    {'title': 'Annihilation',
+    'author': 'Jeff Vandermeer',
+    'genre': 'Science Fiction'},
+    {'title': 'Octopus Pie',
+    'author': 'Maredeth Gran',
+    'genre': 'Comic'},
+    {'title': 'Cabin At the End of the World',
+    'author': 'Paul Tremblay',
+    'genre': 'Horror'},
+    {'title': 'Severance',
+    'author': 'Ling Ma',
+    'genre': 'Science Fiction'},
+]
+
+for book in bookshelf:
+    [print(key,': ', book[key]) for key in book]
+
+picked_genre = input('Please pick a genre: ')
+
+genre_from_shelf= []
+for book in bookshelf:
+    if book['genre'].lower() == picked_genre.lower():
+        genre_from_shelf.append(book['title'])
+if genre_from_shelf == []:
+    print("No books in this genre")
+else:
+    print(f'I have the following titles in the genre {picked_genre}:')
+    [print(result) for result in genre_from_shelf]
