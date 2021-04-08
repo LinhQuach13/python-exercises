@@ -93,7 +93,7 @@ print(negative_numbers)
 
 # Exercise 14 - use a list comprehension w/ a conditional in order 
 # to produce a list of numbers with 2 or more numerals
-number_with_2= [number for number in numbers if len(str(number)) > 1 and number > 0]
+number_with_2= [number for number in numbers if len(str(abs((number)))) >= 2 ]
 print(number_with_2)
 
 # Exercise 15 - Make a variable named numbers_squared that contains 
