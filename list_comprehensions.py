@@ -24,7 +24,6 @@ for fruit in fruits:
 uppercase_fruit= [fruit.upper() for fruit in fruits]
 print(uppercase_fruit)
     
-
 # Exercise 2 - create a variable named capitalized_fruits and 
 # use list comprehension syntax to produce output like ['Mango', 'Kiwi', 'Strawberry', etc...]
 capitalized_fruits = [fruit.capitalize() for fruit in fruits]
@@ -32,9 +31,29 @@ print(capitalized_fruits)
 
 # Exercise 3 - Use a list comprehension to make a variable named fruits_with_more_than_two_vowels. 
 # Hint: You'll need a way to check if something is a vowel.
+def count_vowels(string):
+    count = 0
+    vowels=set('aeiouAEIOU')
+    for letter in string:
+        if letter in vowels:
+            count += 1
+    return count
+fruits_with_more_than_two_vowels= [fruit for fruit in fruits if count_vowels(fruit) > 2]
+
+print (fruits_with_more_than_two_vowels)
 
 # Exercise 4 - make a variable named fruits_with_only_two_vowels. 
 # The result should be ['mango', 'kiwi', 'strawberry']
+def count_vowels(string):
+    count = 0
+    vowels=set('aeiouAEIOU')
+    for letter in string:
+        if letter in vowels:
+            count += 1
+    return count
+fruits_with_more_than_two_vowels= [fruit for fruit in fruits if count_vowels(fruit) == 2]
+
+print (fruits_with_more_than_two_vowels)
 
 # Exercise 5 - make a list that contains each fruit with more than 5 characters
 fruits_with_more_than_5_characters= [fruit for fruit in fruits if len(str(fruit)) > 5]
