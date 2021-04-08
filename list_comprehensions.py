@@ -74,6 +74,8 @@ print(fruits_character_length)
 
 # Exercise 9 - Make a variable named fruits_with_letter_a that contains a 
 # list of only the fruits that contain the letter "a"
+fruit_with_char_a = [fruit for fruit in fruits if 'a' in fruit]
+print(fruit_with_char_a)
 
 # Exercise 10 - Make a variable named even_numbers that holds only the even numbers 
 even_numbers = [number for number in numbers if number % 2 == 0]
