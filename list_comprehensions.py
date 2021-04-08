@@ -52,9 +52,9 @@ def count_vowels(string):
         if letter in vowels:
             count += 1
     return count
-fruits_with_more_than_two_vowels= [fruit for fruit in fruits if count_vowels(fruit) == 2]
+fruits_with_only_two_vowels= [fruit for fruit in fruits if count_vowels(fruit) == 2]
 
-print(fruits_with_more_than_two_vowels)
+print(fruits_with_only_two_vowels)
 
 # Exercise 5 - make a list that contains each fruit with more than 5 characters
 fruits_with_more_than_5_characters= [fruit for fruit in fruits if len(str(fruit)) > 5]
