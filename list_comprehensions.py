@@ -29,6 +29,9 @@ print(uppercase_fruit)
 capitalized_fruits = [fruit.capitalize() for fruit in fruits]
 print(capitalized_fruits)
 
+capitalized_fruits = [fruit.title() for fruit in fruits]
+print(capitalized_fruits)
+
 # Exercise 3 - Use a list comprehension to make a variable named fruits_with_more_than_two_vowels. 
 # Hint: You'll need a way to check if something is a vowel.
 def count_vowels(string):
@@ -87,7 +90,7 @@ odd_numbers = [number for number in numbers if number % 2 != 0]
 print(odd_numbers)
 
 # Exercise 12 - Make a variable named positive_numbers that holds only the positive numbers
-positive_numbers = [number for number in numbers if number >= 0]
+positive_numbers = [number for number in numbers if number > 0]
 print(positive_numbers)
 
 # Exercise 13 - Make a variable named negative_numbers that holds only the negative numbers
@@ -114,7 +117,5 @@ print(odd_negative_numbers)
 numbers_plus_5 = [number + 5 for number in numbers]
 print(numbers_plus_5)
 
-# BONUS Make a variable named "primes" that is a list containing 
-# the prime numbers in the numbers list. *Hint* you may want
-#  to make or find a helper function that determines if a given number is prime or not.
+
 
