@@ -40,7 +40,7 @@ def count_vowels(string):
     return count
 fruits_with_more_than_two_vowels= [fruit for fruit in fruits if count_vowels(fruit) > 2]
 
-print (fruits_with_more_than_two_vowels)
+print(fruits_with_more_than_two_vowels)
 
 # Exercise 4 - make a variable named fruits_with_only_two_vowels. 
 # The result should be ['mango', 'kiwi', 'strawberry']
