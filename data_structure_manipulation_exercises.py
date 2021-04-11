@@ -104,18 +104,18 @@ print('Web Development students have an average of ', (pets / web_stu), ' pets.'
 
 # 9. What is the average pet age for students in data science?
 total_age= 0 
-number_pt= 0
 for student in students:
     if student['course']== 'data science':
         pets = student['pets']
         for pet in pets:
             total_age += pet['age']
             number_pt+= 1
-            avg= int(total_age/number_pets)
+            avg= int(total_age/number_pt)
 print("The avg pet age for students in data science is", avg)
 
 
-#  10. What is most frequent coffee preference for data science students?
+#  10. What is most frequent coffee preference for data 
+# science students?
 light= 0 
 medium= 0
 dark= 0
@@ -136,6 +136,57 @@ print(coffee_preference)
 
 # 11. What is the least frequent coffee preference 
 # for web development students?
+light= 0 
+medium= 0
+dark= 0
+light_list= []
+medium_list=[]
+dark_list= []
+for student in students:
+    if student['course']== 'web development':
+        if student.get("coffee_preference")== "light":
+            light+=1
+            light_list.append(student)
+            light= len(light_list)
+        elif student.get("coffee_preference")== "medium":
+            medium+=1
+            medium_list.append(student)
+            med= len(medium_list)
+        elif student.get("coffee_preference")== "dark":
+            dark+=1
+            dark_list.append(student)
+            dark= len(dark_list)
+            
+for coffee in student:
+    if light < med and light < dark:
+        print("Least frequent coffee is light")
+    else:
+        pass
+    if light == med:
+        print("Least frequent coffee is light and medium")
+    else:
+        pass
+    if light == dark:
+        print("Least frequent coffee is light and dark")
+    else:
+        pass
+    if med < light and med < dark:
+        print("Least frequent coffee is medium")
+    else:
+        pass
+    if med == dark:
+        print("Least frequent coffee is medium and dark")
+        break
+    else: 
+        pass
+    if dark < light and dark < med:
+        print("Least frequent coffee is dark")
+    else:
+        print("Error")
+
+  
+
+
 
 
 # 12. What is the average grade for students with at least 2 pets?
@@ -143,7 +194,13 @@ print(coffee_preference)
 
 
 # 13. How many students have 3 pets?
+three_pets=[]
+for student in students:
+    if len(student['pets']) == 3:
+        three_pets.append(student)
+        amt_of_pets= len(three_pets)
 
+print(f'The amount of students who have 3 pets is: {amt_of_pets}')          
 
 
 # 14. What is the average grade for students with 0 pets?
