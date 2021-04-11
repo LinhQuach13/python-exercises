@@ -136,24 +136,18 @@ print(coffee_preference)
 
 # 11. What is the least frequent coffee preference 
 # for web development students?
-light= 0 
-medium= 0
-dark= 0
 light_list= []
 medium_list=[]
 dark_list= []
 for student in students:
     if student['course']== 'web development':
         if student.get("coffee_preference")== "light":
-            light+=1
             light_list.append(student)
             light= len(light_list)
         elif student.get("coffee_preference")== "medium":
-            medium+=1
             medium_list.append(student)
             med= len(medium_list)
         elif student.get("coffee_preference")== "dark":
-            dark+=1
             dark_list.append(student)
             dark= len(dark_list)
             
@@ -190,7 +184,11 @@ for coffee in student:
 
 
 # 12. What is the average grade for students with at least 2 pets?
-
+grades_list= []
+for student in students:
+    if len(student['pets']) >= 2:
+        grades_list.extend(student['grades'])
+print("The average grade of students with at least two pets is", mean(grades_list))    
 
 
 # 13. How many students have 3 pets?
@@ -204,7 +202,29 @@ print(f'The amount of students who have 3 pets is: {amt_of_pets}')
 
 
 # 14. What is the average grade for students with 0 pets?
+grades_list= []
+for student in students:
+    if len(student['pets']) ==0:
+        grades_list.extend(student['grades'])
+print("The average grade of students with no pets is", mean(grades_list))
+
+
 # 15. What is the average grade for web development students? data science students?
+g_list= []
+for student in students:
+    if student['course'] =='web development':
+        g_list.extend(student['grades'])
+print("The average grade of web developement students is", mean(g_list))
+
+
+gr_list= []
+for student in students:
+    if student['course'] =='data science':
+        gr_list.extend(student['grades'])
+print("The average grade of data science", mean(gr_list))
+
+
+
 # 16. What is the average grade range (i.e. highest grade - lowest grade) for dark coffee drinkers?
 # 17. What is the average number of pets for medium coffee drinkers?
 # 18. What is the most common type of pet for web development students?
@@ -235,7 +255,7 @@ students = [
         "student": "Marie Curie",
         "coffee_preference": "light",
         "course": "web development",
-        "grades": [70, 89, 69, 65],
+        "grades": [70, 91, 82, 71],,
         "pets": [{"species": "cat", "age": 0}],
     },
     {
