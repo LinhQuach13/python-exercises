@@ -41,18 +41,16 @@ tip_percentage= input('Please enter tip percentage between 0.00 and 0.01: ')
 bill_total = input('Please put in total of bill ')
 def calculate_tip():
     total_tip= float(bill_total) * float(tip_percentage)
-    print (total_tip)
+    return total_tip
 
 
 
 #6. Define a function named apply_discount. It should accept a original price, 
 # and a discount percentage, and return the price after the discount is applied.
-original_price= input('Please input original price: ')
-disc_percentage = input('Please input discount percentage ')
-def apply_discount():
+def apply_discount(original_price, disc_percentage):
     discount= float(original_price) * float(disc_percentage)
     total= float(original_price) - float(discount)
-    print(total)
+    return(total)
 
 
 #7. Define a function named handle_commas. It should 
