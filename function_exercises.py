@@ -121,7 +121,3 @@ def normalize_name(s):
 def cumulative_sum(nums_list):
     return [sum(nums_list[:i+1]) for i in range(len(nums_list))]
 
-# Bonus
-# Create a function named twelveto24. It should accept a string in the format 10:45am or 
-# 4:30pm and return a string that is the representation of the time in a 24-hour format. 
-# Bonus write a function that does the opposite.
