@@ -37,11 +37,14 @@ def capitalize(w):
 #5. Define a function named calculate_tip. 
 # It should accept a tip percentage (a number between 0 and 1) 
 # and the bill total, and return the amount to tip.
-tip_percentage= input('Please enter tip percentage between 0.00 and 0.01: ')
+tip_percentage= input('Please enter tip percentage between 0.00 and 1.00: ')
 bill_total = input('Please put in total of bill ')
 def calculate_tip():
     total_tip= float(bill_total) * float(tip_percentage)
     return total_tip
+    
+    
+print(calculate_tip())
 
 
 
