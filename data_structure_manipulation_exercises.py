@@ -188,6 +188,8 @@ print(f'The amount of students who have 3 pets is: {amt_of_pets}')
 
 
 # 14. What is the average grade for students with 0 pets?
+from statistics import mean
+
 grades_list= []
 for student in students:
     if len(student['pets']) ==0:
