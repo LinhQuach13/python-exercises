@@ -3,7 +3,7 @@
 # Write the python code to answer the following questions:
 
 # 1. How many students are there?
-len(students)
+amt_of_students= len(students)
 
 
 # 2. How many students prefer light coffee? For each type of coffee roast?
@@ -24,8 +24,6 @@ for student in students:
     if student.get("coffee_preference")== "dark":
         pref_dark.append(student)
 print(len(pref_dark))
-
-
 
 
 # 3. How many types of each pet are there?
@@ -49,15 +47,13 @@ print((f'Number of dogs= {len(dogs)}'))
 print((f'Number of cats= {len(cats)}'))
 
 
-
-
 # 4. How many grades does each student have? Do they all have the
 #  same number of grades?
 for student in students:
     number_of_grades= len(student["grades"])
     print(f"{student['student']} has {number_of_grades} grades")
-print(f"All students have the same amount of grades")
 
+print(f"All students have the same amount of grades")
 
 
 # 5. What is each student's grade average?
@@ -66,13 +62,11 @@ for student in students:
     print(f"{student['student']} has a grade average of {grade_avg}")
 
 
-
 # 6. How many pets does each student have?
 pet_list= []
 for student in students:
     number_of_pets= len(student['pets'])
     print(f"{student['student']} has {number_of_pets} pets")
-
 
 
 # 7. How many students are in web development? data science?
@@ -89,7 +83,6 @@ for student in students:
 print('There are', (DS_stu), ' data science students.')
 
 
-
 # 8. What is the average number of pets for students in 
 # web development?
 web_stu = 0
@@ -99,7 +92,6 @@ for student in students:
         web_stu += 1
         pets += len(student['pets'])
 print('Web Development students have an average of ', (pets / web_stu), ' pets.')
-
 
 
 # 9. What is the average pet age for students in data science?
@@ -131,7 +123,6 @@ coffee_choices= dict(light= light, medium= medium, dark= dark)
 coffee_preference= max(coffee_choices, key=coffee_choices.get)
 
 print(coffee_preference)
-
 
 
 # 11. What is the least frequent coffee preference 
@@ -179,10 +170,6 @@ for coffee in student:
         print("Error")
 
   
-
-
-
-
 # 12. What is the average grade for students with at least 2 pets?
 grades_list= []
 for student in students:
@@ -197,7 +184,6 @@ for student in students:
     if len(student['pets']) == 3:
         three_pets.append(student)
         amt_of_pets= len(three_pets)
-
 print(f'The amount of students who have 3 pets is: {amt_of_pets}')          
 
 
@@ -224,12 +210,62 @@ for student in students:
 print("The average grade of data science", mean(gr_list))
 
 
-
 # 16. What is the average grade range (i.e. highest grade - lowest grade) for dark coffee drinkers?
+average_grades = []
+for student in students:
+    if student['coffee_preference'] == 'dark':
+        average_grades.append(sum(student['grades']) / len(student['grades']))
+    
+print('The highest average grade for dark coffee drinkers:', max(average_grades))
+print('The lowest average grade for dark coffee drinkers is:', min(average_grades))
+
+
 # 17. What is the average number of pets for medium coffee drinkers?
+med_drinkers = 0
+num_pets = 0
+for student in students:
+    if student['coffee_preference'] == 'medium':
+        med_drinkers += 1
+        num_pets += len(student['pets'])
+        avg_num= num_pets / med_drinkers
+
+print('The average number of pets for medium coffee drinkers:', avg_num)
+
+
 # 18. What is the most common type of pet for web development students?
+pet_species = []
+for student in students:
+    if student['course'] == 'web development':
+        for pet in student['pets']:
+            pet_species.append(pet['species'])
+            max_species= max(set(pet_species))
+            
+            
+print(f"The most common pet species for web development students: {max_species}")
+
+
 # 19. What is the average name length?
+l_of_names = []
+for student in students:
+    l_of_names.append(len(student['student']))
+    avg_l_of_names= round(sum(l_of_names) / len(lengths_of_names), 2)
+    
+print(f"The average name length is: {avg_l_of_names}")
+
+
 # 20. What is the highest pet age for light coffee drinkers?
+ages_of_pets = []
+for student in students:
+    if student['coffee_preference'] == 'light':
+        for pet in student['pets']:
+            ages_of_pets.append(pet['age'])
+            max_age= max(set(ages_of_pets))
+
+print(f"The highest pet age for light coffee drinkers is: {max_age}")
+
+
+
+
 
 # students.py
 
